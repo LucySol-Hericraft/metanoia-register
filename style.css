@@ -1,0 +1,439 @@
+:root{
+    /* Colores */
+    --color-primary: #6c0a3f;
+    --color-secondary: #9e005d;
+    --color-terciary: #d4145a;
+    --color-complement: #C0C0C0;
+    --color-white: #FFFFFF;
+    --color-text: #939393;
+    --color-background: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background: var(--color-primary);
+    overflow-x: hidden;
+}
+
+.bg-loto{
+    width: 500px;
+    position: absolute;
+    margin: 300px 0 0 200px;
+}
+
+/* ==========================
+   Layout
+========================== */
+
+.layout {
+    display: flex;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* ==========================
+   Panel izquierdo
+========================== */
+
+.left-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.brand {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    z-index: 2;
+    color: var(--color-text);
+    span{
+        color: var(--color-terciary);
+    }
+}
+
+.brand img {
+    width: 90%;
+    height: auto;
+    margin: 10% 0 20% 0;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    i{
+        color: var(--color-terciary);
+        font-size: 3rem;
+        margin-bottom: 5%;
+    }
+    h1{
+        color: var(--color-white);
+        font-size: 2.8rem;
+    }
+    p{
+        font-size: 1.2rem;
+        color: var(--color-white);
+        span{
+            font-weight: 700;
+        }
+    }
+}
+
+/* ==========================
+   Panel derecho
+========================== */
+
+.right-panel {
+    flex: 1.2;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden-sec{
+    display: none;
+}
+
+/* ==========================
+   Tarjeta de Login
+========================== */
+
+.card {
+    position: absolute;
+    top: 620px;
+    left: 53%;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    padding: 50px;
+    background: var(--color-white);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, .3);
+    transform: translate(-50%, -50%);
+}
+
+.welcome{
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 400;
+}
+
+.slogan{
+    margin-top: 1%;
+}
+/* ==========================
+   Formulario
+========================== */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+
+    label {
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin: 10px 0;
+    }
+
+    input {
+        width: 100%;
+        padding: 14px;
+        border: 1px solid #cccccc;
+        border-radius: 10px;
+        outline: none;
+    }
+    input:focus {
+        background: #fff;
+        box-shadow: 0 0 0 2px var(--color-secondary);
+    }
+    .input-icon {
+    position: relative;
+    }
+
+    .input-icon input {
+        width: 100%;
+        padding: 14px 50px 1 48px;
+    }
+
+    .toggle-password {
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 32px;
+        height: 32px;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        color: #999;
+        transition: .25s;
+    }
+
+    .toggle-password:hover {
+        color: var(--color-background);
+        background-color: var(--color-secondary);
+    }
+}
+
+.ts-wrapper{
+    width:100%;
+}
+
+.ts-control{
+    min-height:50px;
+    padding:14px 14px 1 48px !important;
+
+    border:1px solid #ccc !important;
+    border-radius:10px !important;
+
+    box-shadow:none !important;
+}
+
+.ts-control:focus-within{
+    border-color:var(--color-secondary) !important;
+    box-shadow:0 0 0 2px var(--color-secondary) !important;
+}
+
+.ts-dropdown{
+    border-radius:10px;
+}
+
+.required-badge{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:18px;
+    height:18px;
+    border-radius:50%;
+    background:#d32f2f;
+    color:#fff;
+    font-weight:700;
+}
+
+button {
+    width: 100%;
+    padding: 16px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--color-complement);
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover {
+    background: var(--color-secondary);
+}
+
+.btn-secondary {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-complement);
+    color: var(--color-complement);
+}
+
+.singup {
+    margin-top: 2%;
+    font-weight: 500;
+    a{
+        color: var(--color-text);
+        text-decoration: none;
+        transition: .2s;
+    }
+    a:hover{
+        color: var(--color-secondary);
+    }
+}
+
+/* ==========================
+   Separadores
+========================== */
+
+.separator {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    margin: 30px 0;
+}
+
+.separator::before,
+.separator::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: #d8d8d8;
+}
+
+.separator span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #777;
+    font-size: .95rem;
+    white-space: nowrap;
+}
+
+
+.separator-icon::before,
+.separator-icon::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+}
+
+.separator-icon::before {
+    background: linear-gradient(
+        to right,
+        transparent,
+        #d4145a 25%,
+        #d4145a
+    );
+}
+
+.separator-icon::after {
+    background: linear-gradient(
+        to left,
+        transparent,
+        #d4145a 25%,
+        #d4145a
+    );
+}
+.separator-icon span {
+    width: 8%;
+    border-radius: 50%;
+    color: var(--color-secondary);
+    font-size: 1.5rem;
+}
+
+/* ==========================
+   Barra Inferior
+========================== */
+
+.features {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 0 15% 5%;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 25px;
+}
+
+.feature:last-child {
+    border-right: none;
+}
+
+.feature-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--color-complement);
+    transition: .2s;
+}
+
+.feature-icon img{
+    margin-top: 4px;
+    width: 75px;
+    height: 78px;
+}
+
+.feature-icon:hover{
+    background: var(--color-terciary);
+}
+
+.feature-text h4 {
+    margin: 0;
+    color: var(--color-white);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* ==========================
+   Responsive
+========================== */
+
+@media (max-width:768px){
+
+    body{
+        margin: 0;
+        background-image:url("./metanoiaweb-02.png");
+        background-size:cover;
+        background-position:center;
+        background-repeat:no-repeat;
+        overflow-x: hidden;
+    }
+
+    .bg-loto{
+        display: none;
+    }
+
+    .left-panel{
+        display: none;
+    }
+    
+    .hidden-sec{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -80%;
+    }
+
+    .brandlogo{
+        width: 60%;
+        height: auto;
+    }
+    .welcome{
+        font-size: 3rem;
+        font-weight: 500;
+    }
+    .slogan{
+        font-size: 1.5rem;
+    }
+    .separator{
+        width: 50%;
+    }
+    .card {
+        top: 1020px;
+        margin-left: -3%;
+
+        .welcome, .slogan, .separator, .separator-icon{
+            display: none;
+        }
+    }
+}
