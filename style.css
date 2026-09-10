@@ -417,9 +417,11 @@ button:hover {
     .welcome{
         font-size: 3rem;
         font-weight: 500;
+        color: var(--color-complement);
     }
     .slogan{
         font-size: 1.5rem;
+        color: var(--color-complement);
     }
     .separator{
         width: 50%;
