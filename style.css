@@ -71,6 +71,10 @@ body {
     margin: 10% 0 20% 0;
 }
 
+.brandlogo-2{
+        display: none;
+    }
+
 .intro{
     display: flex;
     flex-direction: column;
@@ -106,6 +110,7 @@ body {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    flex-wrap: wrap;
     gap: 15px;
     padding: 25px;
 }
@@ -411,9 +416,15 @@ button:hover {
     }
 
     .brandlogo{
-        width: 60%;
+        display: none;
+    }
+
+    .brandlogo-2{
+        display: block;
+        width: 70%;
         height: auto;
     }
+
     .welcome{
         font-size: 3rem;
         font-weight: 500;
